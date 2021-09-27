@@ -1,0 +1,56 @@
+.container {
+  height: 100vh;
+
+  .jumbotron {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 100px;
+
+    > span {
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    > h1 {
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 60px;
+      text-align: left;
+    }
+
+    > h3 {
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    > button {
+      margin-top: 56px;
+      border: 1px solid #ffffff;
+      border-radius: 6px;
+      padding: 10px 24px;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 32px;
+      background-color: transparent;
+
+      &:hover {
+        color: #338e4f;
+        background-color: #ffffff;
+      }
+    }
+  }
+}
