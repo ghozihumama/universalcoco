@@ -1,5 +1,5 @@
 import React from "react";
-import { ImgJulio, ImgStella, ImgHafis } from "assets/images";
+import { ImgJulio, ImgHafis, ImgArya } from "assets/images";
 import { IconInstagramGrey, IconLinkedInGrey } from "assets/icons";
 import Styles from "./styles.module.scss";
 
@@ -23,17 +23,17 @@ const data = [
     image: ImgHafis,
   },
   {
-    name: "Stella Carissa",
+    name: "Arya Pratama",
     position: "Business Development",
     quotes:
       "Many of life’s failures are people who did not realize how close they were to success when they gave up.",
-    linkedIn: "https://www.linkedin.com/in/stella-carissa-a8a078199/",
-    instagram: "https://www.instagram.com/stellacarissa/",
-    image: ImgStella,
+    linkedIn: "https://www.linkedin.com/in/areyawn",
+    instagram: "https://www.instagram.com/areyawn_/",
+    image: ImgArya,
   },
 ];
 
-const Person = props => {
+const Person = (props) => {
   const { name, position, quotes, linkedIn, instagram, image } = props;
 
   return (
@@ -54,7 +54,7 @@ const Person = props => {
   );
 };
 
-export const Team = props => {
+export const Team = (props) => {
   const { innerRef } = props;
   return (
     <div className={Styles.container} ref={innerRef}>

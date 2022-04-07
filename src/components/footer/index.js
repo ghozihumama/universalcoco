@@ -7,7 +7,7 @@ import {
 } from "assets/icons";
 import { LogoWhite } from "assets/images";
 
-export const Footer = props => {
+export const Footer = (props) => {
   const { innerRef } = props;
   return (
     <div className={Styles.container} ref={innerRef}>
@@ -53,7 +53,7 @@ export const Footer = props => {
         <section></section>
       </main>
       <footer>
-        <span>© 2021 Universal Coco. All rights reserved</span>
+        <span>© 2022 Universal Coco. All rights reserved</span>
       </footer>
     </div>
   );

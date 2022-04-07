@@ -11,12 +11,12 @@ const dataCard = [
   {
     Icon: IconIntegrity,
     title: "Integrity",
-    desc: "Integrity means telling the truth, keeping our word and treating others with fairness and respect. Integrity is one of our most cherished assets. It must not be compromised.",
+    desc: "Integrity means telling the truth, keeping our word, and treating others with fairness and respect. Integrity is one of our most cherished assets. It must not be compromised.",
   },
   {
     Icon: IconQuality,
     title: "Quality",
-    desc: "Quality is exhibited in many ways by selling and supporting products and services that delight customers, establishing a work environment , delivering financial results that meet investor expectations.",
+    desc: "Quality is exhibited in many ways by selling and supporting products and services that delight customers, establishing a work environment, and delivering financial results that meet investor expectations.",
   },
   {
     Icon: IconCommitment,
@@ -26,11 +26,11 @@ const dataCard = [
   {
     Icon: IconInnovation,
     title: "Innovation",
-    desc: "Innovation means inventing, designing, developing  products and services that have high appeal in the marketplace and strengthen customer preference for the Universal Coco Indonesia project.",
+    desc: "Innovation means inventing, designing, and developing products and services that have high appeal in the marketplace and strengthen customer preference for the Universal Coco Indonesia project.",
   },
 ];
 
-const CardItem = props => {
+const CardItem = (props) => {
   const { Icon, title, desc } = props;
 
   return (
@@ -42,7 +42,7 @@ const CardItem = props => {
   );
 };
 
-export const KeyFeature = props => {
+export const KeyFeature = (props) => {
   const { innerRef } = props;
   return (
     <div className={Styles.container} ref={innerRef}>

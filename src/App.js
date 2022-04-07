@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";
+import FloatingWhatsApp from "react-floating-whatsapp";
 import Styles from "./App.module.scss";
 import { NavigationTop } from "components/navbar/index";
 import { Jumbotron } from "components/jumbotron";
@@ -7,6 +8,7 @@ import { KeyFeature } from "components/keyFeatures";
 import { Product } from "components/product";
 import { Team } from "components/personProfile";
 import { Footer } from "components/footer";
+import { LogoGreen } from "assets/images";
 
 function App() {
   const [y, setY] = useState(window.scrollY);
@@ -19,12 +21,12 @@ function App() {
   const teamRef = useRef(null);
   const contactRef = useRef(null);
 
-  const scrollToRef = ref => {
+  const scrollToRef = (ref) => {
     ref.current.scrollIntoView(true);
   };
 
   const handleNavigation = useCallback(
-    e => {
+    (e) => {
       const window = e.currentTarget;
       if (y > window.scrollY) {
         setScrollState("up");
@@ -51,7 +53,7 @@ function App() {
       <NavigationTop
         scrollState={scrollState}
         positionY={y}
-        onNavigate={ref => scrollToRef(ref)}
+        onNavigate={(ref) => scrollToRef(ref)}
         refs={{
           aboutRef: aboutRef,
           journeyRef: journeyRef,
@@ -67,6 +69,12 @@ function App() {
       <Product innerRef={productRef} />
       <Team innerRef={teamRef} />
       <Footer innerRef={contactRef} />
+      <FloatingWhatsApp
+        phoneNumber={"6289529283566"}
+        accountName={"Universal Coco"}
+        avatar={LogoGreen}
+        statusMessage={"Supplying across the globe"}
+      />
     </div>
   );
 }
