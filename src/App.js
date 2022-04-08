@@ -74,6 +74,9 @@ function App() {
         accountName={"Universal Coco"}
         avatar={LogoGreen}
         statusMessage={"Supplying across the globe"}
+        chatMessage={
+          "Hello there, \nwelcome to Universal Coco Indonesia. \nHow can we help you ? 😀"
+        }
       />
     </div>
   );

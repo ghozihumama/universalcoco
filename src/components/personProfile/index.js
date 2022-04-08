@@ -25,8 +25,7 @@ const data = [
   {
     name: "Arya Pratama",
     position: "Business Development",
-    quotes:
-      "Many of life’s failures are people who did not realize how close they were to success when they gave up.",
+    quotes: "A little progress every day adds up to big results.",
     linkedIn: "https://www.linkedin.com/in/areyawn",
     instagram: "https://www.instagram.com/areyawn_/",
     image: ImgArya,
