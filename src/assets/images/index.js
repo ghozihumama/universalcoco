@@ -11,6 +11,9 @@ import ThumbnailCopraMeal from "./copra-meal.jpeg";
 import ThumbnailDesiccatedCoconut from "./desiccated-coconut.png";
 import ThumbnailVirginCoconutOil from "./virgin-coconut-oil.png";
 import BannerJourney from "./banner-journey.png";
+import BannerProduct1 from "./banner-product1.png";
+import BannerProduct2 from "./banner-product2.png";
+import BannerProduct3 from "./banner-product3.png";
 
 //team
 import ImgJulio from "./julio.png";
@@ -42,4 +45,7 @@ export {
   ThumbnailDesiccatedCoconut,
   ThumbnailVirginCoconutOil,
   BannerJourney,
+  BannerProduct1,
+  BannerProduct2,
+  BannerProduct3,
 };

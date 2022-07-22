@@ -1,72 +1,50 @@
-import React, { useState, useCallback, useEffect, useRef } from "react";
-import Styles from "../App.module.scss";
-import { NavigationTop } from "components/navbar/index";
+import React, { useState, useEffect, useCallback } from "react";
+import { useParams } from "react-router-dom";
+import Spinner from "react-bootstrap/Spinner";
 import { Jumbotron } from "components/jumbotron";
-import { AboutUs } from "components/aboutUs";
-import { KeyFeature } from "components/keyFeatures";
-import { Product } from "components/product";
-import { Team } from "components/personProfile";
-import { Footer } from "components/footer";
 import productJson from "data/detailProduct.json";
+import { Base } from "components/base";
+import { BannerProduct1, BannerProduct2, BannerProduct3 } from "assets/images";
 
 function ProductDetailView() {
-  const [y, setY] = useState(window.scrollY);
-  const [scrollState, setScrollState] = useState("up");
+  const [data, setData] = useState(null);
+  const params = useParams();
+  const { key } = params;
 
-  const aboutRef = useRef(null);
-  const journeyRef = useRef(null);
-  const featureRef = useRef(null);
-  const productRef = useRef(null);
-  const teamRef = useRef(null);
-  const contactRef = useRef(null);
+  const getData = useCallback(() => {
+    const product = productJson.find((item) => (item.key = key));
+    setData(product);
+  }, [key]);
 
-  const scrollToRef = (ref) => {
-    ref.current.scrollIntoView(true);
+  const handleImageBanner = () => {
+    switch (key) {
+      case "coconut-charcoal-briquette":
+        return BannerProduct1;
+      case "desiccated-coconut":
+        return BannerProduct2;
+      case "virgin-coconut-oil":
+        return BannerProduct3;
+      default:
+        break;
+    }
   };
 
-  const handleNavigation = useCallback(
-    (e) => {
-      const window = e.currentTarget;
-      if (y > window.scrollY) {
-        setScrollState("up");
-      } else if (y < window.scrollY) {
-        setScrollState("down");
-      }
-      setY(window.scrollY);
-    },
-    [y]
-  );
-
   useEffect(() => {
-    setY(window.scrollY);
-    window.addEventListener("scroll", handleNavigation);
-    return () => {
-      window.removeEventListener("scroll", handleNavigation);
-    };
-  }, [handleNavigation]);
+    getData();
+  }, [getData]);
 
   return (
-    <div className={Styles.container}>
-      <NavigationTop
-        scrollState={scrollState}
-        positionY={y}
-        onNavigate={(ref) => scrollToRef(ref)}
-        refs={{
-          aboutRef: aboutRef,
-          journeyRef: journeyRef,
-          featureRef: featureRef,
-          productRef: productRef,
-          teamRef: teamRef,
-          contactRef: contactRef,
-        }}
-      />
-      <Jumbotron />
-      <AboutUs innerRef={aboutRef} />
-      <KeyFeature innerRef={featureRef} />
-      <Product innerRef={productRef} />
-      <Team innerRef={teamRef} />
-      <Footer innerRef={contactRef} />
-    </div>
+    <Base>
+      {data ? (
+        <Jumbotron
+          image={handleImageBanner()}
+          h1={data.banner.h1}
+          h3={data.banner.h3}
+        />
+      ) : (
+        <Spinner animation="grow" variant="success" />
+      )}
+    </Base>
   );
 }
 
