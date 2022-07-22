@@ -3,9 +3,10 @@ import Nav from "react-bootstrap/Nav";
 import classNames from "classnames";
 import { UCTextGreen, UCTextWhite } from "assets/icons";
 import Styles from "./styles.module.scss";
+import { Link } from "react-router-dom";
 
-export const NavigationTop = props => {
-  const { scrollState, positionY, onNavigate, refs } = props;
+export const NavigationTop = (props) => {
+  const { scrollState, positionY } = props;
 
   return (
     <Navbar
@@ -17,7 +18,7 @@ export const NavigationTop = props => {
       expand="lg"
       fixed="top"
     >
-      <Navbar.Brand href="#">
+      <Navbar.Brand href="/">
         {scrollState === "up" && positionY === 0 ? (
           <UCTextWhite />
         ) : scrollState === "up" ? (
@@ -36,59 +37,60 @@ export const NavigationTop = props => {
             justifyContent: "flex-end",
           }}
         >
-          <span
+          <Link
             className={classNames(Styles.navText, {
               [Styles.black]: scrollState === "up",
               [Styles.white]: scrollState === "up" && positionY === 0,
             })}
-            onClick={() => onNavigate(refs.aboutRef)}
+            to={"/#about"}
           >
             About
-          </span>
-          <span
+          </Link>
+          <Link
             className={classNames(Styles.navText, {
               [Styles.black]: scrollState === "up",
               [Styles.white]: scrollState === "up" && positionY === 0,
             })}
+            to={"/journey"}
           >
             Journey
-          </span>
-          <span
+          </Link>
+          <Link
             className={classNames(Styles.navText, {
               [Styles.black]: scrollState === "up",
               [Styles.white]: scrollState === "up" && positionY === 0,
             })}
-            onClick={() => onNavigate(refs.featureRef)}
+            to={"/#feature"}
           >
             Feature
-          </span>
-          <span
+          </Link>
+          <Link
             className={classNames(Styles.navText, {
               [Styles.black]: scrollState === "up",
               [Styles.white]: scrollState === "up" && positionY === 0,
             })}
-            onClick={() => onNavigate(refs.productRef)}
+            to={"/#product"}
           >
             Product
-          </span>
-          <span
+          </Link>
+          <Link
             className={classNames(Styles.navText, {
               [Styles.black]: scrollState === "up",
               [Styles.white]: scrollState === "up" && positionY === 0,
             })}
-            onClick={() => onNavigate(refs.teamRef)}
+            to={"/#team"}
           >
             Team
-          </span>
-          <span
+          </Link>
+          <Link
             className={classNames(Styles.navText, {
               [Styles.black]: scrollState === "up",
               [Styles.white]: scrollState === "up" && positionY === 0,
             })}
-            onClick={() => onNavigate(refs.contactRef)}
+            to={"/#contact"}
           >
             Contact
-          </span>
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
