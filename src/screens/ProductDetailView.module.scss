@@ -1,0 +1,38 @@
+.containerContent {
+  display: flex;
+  flex: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.ingDisplayWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
+}
+
+.imgDisplay {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-top: 10px;
+}
+
+.imgCatalogueWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-top: 10px;
+}
+
+.imgCatalogue {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
