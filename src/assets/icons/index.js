@@ -20,6 +20,11 @@ import { ReactComponent as IconWhatsApp } from "./whatsapp.svg";
 import { ReactComponent as IconDownload } from "./download.svg";
 import { ReactComponent as IconLeft } from "./left.svg";
 import { ReactComponent as IconRight } from "./right.svg";
+import { ReactComponent as Ilustration2015 } from "./ilustration2015.svg";
+import { ReactComponent as Ilustration2016 } from "./ilustration2016.svg";
+import { ReactComponent as Ilustration2017 } from "./ilustration2017.svg";
+import { ReactComponent as Ilustration2018 } from "./ilustration2018.svg";
+import { ReactComponent as Ilustration2020 } from "./ilustration2020.svg";
 
 export {
   Icon2015,
@@ -44,4 +49,9 @@ export {
   IconDownload,
   IconLeft,
   IconRight,
+  Ilustration2015,
+  Ilustration2016,
+  Ilustration2017,
+  Ilustration2018,
+  Ilustration2020,
 };
