@@ -17,6 +17,9 @@ import { ReactComponent as IconInnovation } from "./innovation.svg";
 import { ReactComponent as IconNext } from "./next.svg";
 import { ReactComponent as IconPrev } from "./prev.svg";
 import { ReactComponent as IconWhatsApp } from "./whatsapp.svg";
+import { ReactComponent as IconDownload } from "./download.svg";
+import { ReactComponent as IconLeft } from "./left.svg";
+import { ReactComponent as IconRight } from "./right.svg";
 
 export {
   Icon2015,
@@ -38,4 +41,7 @@ export {
   IconWhatsApp,
   IconInstagramGrey,
   IconLinkedInGrey,
+  IconDownload,
+  IconLeft,
+  IconRight,
 };

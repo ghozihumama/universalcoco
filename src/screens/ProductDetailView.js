@@ -4,6 +4,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { Jumbotron } from "components/jumbotron";
 import productJson from "data/detailProduct.json";
 import { Base } from "components/base";
+import { IconWhatsApp, IconDownload } from "assets/icons";
 import {
   BannerProduct1,
   BannerProduct2,
@@ -27,6 +28,7 @@ import {
   ImgDesiccatedCoconut5,
   ImgDesiccatedCoconut6,
 } from "assets/images";
+import { DesiccatedCoconutCatalog } from "assets/pdf";
 import styles from "./ProductDetailView.module.scss";
 
 function ProductDetailView() {
@@ -38,7 +40,7 @@ function ProductDetailView() {
   const { key } = params;
 
   const getData = useCallback(() => {
-    const product = productJson.find((item) => (item.key = key));
+    const product = productJson.find((item) => item.key === key);
 
     switch (key) {
       case "coconut-charcoal-briquette":
@@ -60,6 +62,7 @@ function ProductDetailView() {
           ImgDesiccatedCoconut5,
           ImgDesiccatedCoconut6,
         ];
+        product.catalogue = DesiccatedCoconutCatalog;
         break;
       case "virgin-coconut-oil":
         product.images = [
@@ -92,6 +95,8 @@ function ProductDetailView() {
   };
 
   useEffect(() => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     getData();
   }, [getData]);
 
@@ -105,7 +110,7 @@ function ProductDetailView() {
             h3={data.banner.h3}
           />
           <div className={styles.containerContent}>
-            <div className={styles.ingDisplayWrapper}>
+            <div className={styles.imgDisplayWrapper}>
               <img
                 src={data.images[idxImgSelected]}
                 className={styles.imgDisplay}
@@ -126,8 +131,24 @@ function ProductDetailView() {
                     />
                   ))}
               </div>
+              <div className={styles.buttonWrapper}>
+                {data.catalogue && (
+                  <a href={data.catalogue} target={"_blank"} rel="noreferrer">
+                    <span>Download Catalog</span>
+                    <IconDownload />
+                  </a>
+                )}
+                <a
+                  href={"https://wa.link/upjns7"}
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
+                  <span>Contact Us</span>
+                  <IconWhatsApp />
+                </a>
+              </div>
             </div>
-            <div style={{ flex: 1 }}>
+            <div className={styles.contentTextWrapper}>
               <h2>{data.name}</h2>
               <h4>{data.tagline}</h4>
               {data.desc.map((desc, idx) => (
@@ -136,10 +157,22 @@ function ProductDetailView() {
                 </p>
               ))}
             </div>
-          </div>
-          <div>
-            <button>Download Catalog</button>
-            <button>Contact Us</button>
+            <div className={styles.specificationWrapper}>
+              <h5>Product Specification</h5>
+              <span>{data.taglineSpecification}</span>
+              <div className={styles.specification}>
+                <ul>
+                  {data.spesification.map((item, idx) => (
+                    <li key={idx.toString()}>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {data.certification && (
+                <span>Sertification: {data.certification}</span>
+              )}
+            </div>
           </div>
         </React.Fragment>
       ) : (

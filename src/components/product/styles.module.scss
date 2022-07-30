@@ -74,6 +74,18 @@
             > svg {
               margin-left: 12px;
             }
+
+            > a {
+              color: #333333;
+              font-family: "Montserrat", sans-serif;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 24px;
+              text-decoration: none;
+              &:hover {
+                text-decoration: none;
+              }
+            }
           }
 
           > a {
@@ -85,6 +97,9 @@
             display: flex;
             align-items: center;
             text-decoration: none;
+            &:hover {
+              text-decoration: none;
+            }
 
             > span {
               color: #333333;
