@@ -8,8 +8,38 @@
 }
 
 .navbar {
-  padding: 10px 100px !important;
   position: fixed;
+
+  @media (min-width: 320px) {
+    padding: 10px !important;
+    width: 100vw;
+  }
+
+  //320px — 480px: Mobile devices
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding: 10px !important;
+    width: 100vw;
+  }
+
+  //481px — 768px: iPads, Tablets
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 10px 100px !important;
+  }
+
+  //769px — 1024px: Small screens, laptops
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 10px 100px !important;
+  }
+
+  //1025px — 1200px: Desktops, large screens
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    padding: 10px 100px !important;
+  }
+
+  //1201px and more —  Extra large screens, TV
+  @media (min-width: 1400px) {
+    padding: 10px 100px !important;
+  }
 
   &.hide {
     display: none;
@@ -34,15 +64,38 @@
   cursor: pointer;
   font-weight: 700;
   text-decoration: none;
+
   &:hover {
     text-decoration: none;
   }
 
   &.black {
     color: #333333;
+
+    @media (min-width: 320px) {
+      background-color: #ffffff;
+      margin-top: 10px;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      background-color: #ffffff;
+      padding: 10px;
+    }
   }
 
   &.white {
     color: #ffffff;
+
+    @media (min-width: 320px) {
+      background-color: #333333;
+      margin-top: 10px;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      background-color: #333333;
+      padding: 10px;
+    }
   }
 }

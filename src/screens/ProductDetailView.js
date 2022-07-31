@@ -177,9 +177,7 @@ function ProductDetailView() {
               <h2>{data.name}</h2>
               <h4>{data.tagline}</h4>
               {data.desc.map((desc, idx) => (
-                <p key={idx.toString()} style={{ width: 500 }}>
-                  {desc}
-                </p>
+                <p key={idx.toString()}>{desc}</p>
               ))}
             </div>
             <div className={styles.specificationWrapper}>
