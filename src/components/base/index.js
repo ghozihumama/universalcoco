@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";
 import FloatingWhatsApp from "react-floating-whatsapp";
-import Styles from "../../App.module.scss";
+import Styles from "./styles.module.scss";
 import { NavigationTop } from "components/navbar/index";
 import { Footer } from "components/footer";
 import { LogoGreen } from "assets/images";

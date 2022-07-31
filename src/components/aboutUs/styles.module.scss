@@ -1,14 +1,53 @@
 .container {
-  padding: 100px 100px;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: 320px) {
+    padding: 100px 10px;
+  }
+
+  //320px — 480px: Mobile devices
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding: 100px 10px;
+  }
+
+  //481px — 768px: iPads, Tablets
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 100px 100px;
+  }
+
+  //769px — 1024px: Small screens, laptops
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 100px 100px;
+  }
+
+  //1025px — 1200px: Desktops, large screens
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    padding: 100px 100px;
+    justify-content: space-between;
+  }
+
+  //1201px and more —  Extra large screens, TV
+  @media (min-width: 1400px) {
+    padding: 100px 100px;
+    justify-content: space-between;
+  }
 
   > section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 450px;
+
+    @media (min-width: 320px) {
+      width: 100vw;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 100vw;
+    }
 
     > h2 {
       color: #000000;
@@ -36,6 +75,17 @@
       font-size: 14px;
       line-height: 28px;
       margin-top: 48px;
+    }
+  }
+
+  img {
+    @media (min-width: 320px) {
+      width: 90vw;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 95vw;
     }
   }
 }
