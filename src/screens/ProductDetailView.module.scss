@@ -377,16 +377,19 @@
 
 .specificationWrapper {
   margin-top: 64px;
+  font-family: "Montserrat", sans-serif;
 
   @media (max-width: 320px) {
-    width: 320px;
+    width: 100vw;
     margin: 10px;
+    margin-top: 40px;
   }
 
   //320px — 480px: Mobile devices
   @media (min-width: 320px) and (max-width: 480px) {
-    width: 320px;
+    width: 100vw;
     margin: 10px;
+    margin-top: 40px;
   }
 
   //481px — 768px: iPads, Tablets
@@ -409,6 +412,10 @@
     width: 1000px;
   }
 
+  > h5 {
+    font-weight: 700;
+  }
+
   .specification {
     margin-top: 32px;
     > ul {
@@ -416,6 +423,7 @@
       flex-direction: column;
       color: #338e4f;
       padding-left: 16px;
+      font-family: "Montserrat", sans-serif;
 
       //769px — 1024px: Small screens, laptops
       @media (min-width: 769px) and (max-width: 1024px) {
@@ -436,6 +444,7 @@
       }
 
       span {
+        font-family: "Montserrat", sans-serif;
         color: black;
       }
     }
