@@ -4,7 +4,7 @@ import Spinner from "react-bootstrap/Spinner";
 import { Jumbotron } from "components/jumbotron";
 import productJson from "data/detailProduct.json";
 import { Base } from "components/base";
-import { IconWhatsApp, IconDownload } from "assets/icons";
+import { IconWhatsApp, IconDownload, IconLeft, IconRight } from "assets/icons";
 import {
   BannerProduct1,
   BannerProduct2,
@@ -34,8 +34,7 @@ import styles from "./ProductDetailView.module.scss";
 function ProductDetailView() {
   const [data, setData] = useState(null);
   const [idxImgSelected, setIdxImgSelected] = useState(0);
-  const [minIdxImgShow, setMinIdxImgShow] = useState(0);
-  const [maxIdxImgShow, setMaxIdxImgShow] = useState(3);
+  const [idxImgShow, setIdxImgShow] = useState({ min: 0, max: 3 });
   const params = useParams();
   const { key } = params;
 
@@ -94,6 +93,22 @@ function ProductDetailView() {
     }
   };
 
+  const handleLeft = () => {
+    if (idxImgShow.min === 0) {
+      return;
+    }
+
+    setIdxImgShow({ min: idxImgShow.min - 1, max: idxImgShow.max - 1 });
+  };
+
+  const handleRight = () => {
+    if (idxImgShow.max === data.images.length - 1) {
+      return;
+    }
+
+    setIdxImgShow({ min: idxImgShow.min + 1, max: idxImgShow.max + 1 });
+  };
+
   useEffect(() => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -117,9 +132,14 @@ function ProductDetailView() {
                 alt={""}
               />
               <div className={styles.imgCatalogueWrapper}>
+                {idxImgShow.min !== 0 && (
+                  <div className={styles.left} onClick={handleLeft}>
+                    <IconLeft />
+                  </div>
+                )}
                 {data.images
                   .filter(
-                    (_, idx) => idx >= minIdxImgShow && idx <= maxIdxImgShow
+                    (_, idx) => idx >= idxImgShow.min && idx <= idxImgShow.max
                   )
                   .map((img, idx) => (
                     <img
@@ -130,6 +150,11 @@ function ProductDetailView() {
                       className={styles.imgCatalogue}
                     />
                   ))}
+                {idxImgShow.max !== data.images.length - 1 && (
+                  <div className={styles.right} onClick={handleRight}>
+                    <IconRight />
+                  </div>
+                )}
               </div>
               <div className={styles.buttonWrapper}>
                 {data.catalogue && (

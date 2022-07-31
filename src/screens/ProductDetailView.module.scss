@@ -139,6 +139,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  position: relative;
 
   @media (min-width: 320px) {
     width: 320px;
@@ -167,6 +168,22 @@
   //1201px and more —  Extra large screens, TV
   @media (min-width: 1400px) {
     width: 500px;
+  }
+
+  .left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  .right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
   }
 }
 
