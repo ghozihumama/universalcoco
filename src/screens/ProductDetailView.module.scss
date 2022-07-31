@@ -145,12 +145,14 @@
   align-items: flex-end;
 
   @media (max-width: 320px) {
-    width: 320px;
+    width: 100vw;
+    align-items: center;
   }
 
   //320px — 480px: Mobile devices
   @media (min-width: 320px) and (max-width: 480px) {
-    width: 320px;
+    width: 100vw;
+    align-items: center;
   }
 
   //481px — 768px: iPads, Tablets
@@ -320,12 +322,12 @@
   margin-top: 30px;
   justify-content: center;
   @media (max-width: 320px) {
-    width: 320px;
+    width: 100vw;
   }
 
   //320px — 480px: Mobile devices
   @media (min-width: 320px) and (max-width: 480px) {
-    width: 320px;
+    width: 100vw;
   }
 
   //481px — 768px: iPads, Tablets
@@ -357,6 +359,18 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+
+    @media (max-width: 320px) {
+      padding: 5px 10px;
+      margin-right: 5px;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 5px 10px;
+      margin-right: 10px;
+    }
+
     &:hover {
       text-decoration: none;
     }
@@ -367,6 +381,15 @@
       font-weight: 700;
       font-size: 16px;
       line-height: 24px;
+
+      @media (max-width: 320px) {
+        font-size: 10px;
+      }
+
+      //320px — 480px: Mobile devices
+      @media (min-width: 320px) and (max-width: 480px) {
+        font-size: 12px;
+      }
     }
 
     > svg {
