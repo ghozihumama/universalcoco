@@ -47,7 +47,7 @@ function HomeView() {
       }
       setY(window.scrollY);
     },
-    [y]
+    [y, setScrollState]
   );
 
   useEffect(() => {

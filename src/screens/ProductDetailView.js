@@ -146,7 +146,7 @@ function ProductDetailView() {
                       key={idx.toString()}
                       src={img}
                       alt={""}
-                      onClick={() => setIdxImgSelected(idx)}
+                      onClick={() => setIdxImgSelected(idx + idxImgShow.min)}
                       className={styles.imgCatalogue}
                     />
                   ))}
