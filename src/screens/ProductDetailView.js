@@ -28,7 +28,11 @@ import {
   ImgDesiccatedCoconut5,
   ImgDesiccatedCoconut6,
 } from "assets/images";
-import { DesiccatedCoconutCatalog } from "assets/pdf";
+import {
+  DesiccatedCoconutCatalog,
+  BriquetteCatalog,
+  VirginCoconutOilCatalog,
+} from "assets/pdf";
 import styles from "./ProductDetailView.module.scss";
 
 function ProductDetailView() {
@@ -51,6 +55,7 @@ function ProductDetailView() {
           ImgBriquette5,
           ImgBriquette6,
         ];
+        product.catalogue = BriquetteCatalog;
         break;
       case "desiccated-coconut":
         product.images = [
@@ -72,6 +77,7 @@ function ProductDetailView() {
           ImgVirginCoconutOil5,
           ImgVirginCoconutOil6,
         ];
+        product.catalogue = VirginCoconutOilCatalog;
         break;
       default:
         break;
