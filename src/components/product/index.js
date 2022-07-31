@@ -105,11 +105,12 @@ export const Product = (props) => {
                 <IconWhatsApp />
               </a>
             </div>
+            <div className={Styles.sectionArrow}>
+              <IconPrev onClick={() => handlePrev()} />
+              <IconNext onClick={() => handleNext()} />
+            </div>
           </section>
           <img src={data[index].thumbnail} alt={"thumbnail"} />
-        </div>
-        <div className={Styles.indicatorContainer}>
-          <div>{/* Indicator */}</div>
         </div>
       </main>
     );

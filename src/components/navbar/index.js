@@ -19,12 +19,10 @@ export const NavigationTop = (props) => {
       fixed="top"
     >
       <Navbar.Brand href="/">
-        {scrollState === "up" && positionY === 0 ? (
+        {(scrollState === "up" && positionY === 0) || scrollState === "down" ? (
           <UCTextWhite />
-        ) : scrollState === "up" ? (
-          <UCTextGreen />
         ) : (
-          <UCTextWhite />
+          <UCTextGreen />
         )}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />

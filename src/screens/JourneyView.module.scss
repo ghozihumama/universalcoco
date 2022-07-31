@@ -5,12 +5,12 @@
   justify-content: center;
 
   @media (max-width: 320px) {
-    width: 320px;
+    width: 100vw;
   }
 
   //320px — 480px: Mobile devices
   @media (min-width: 320px) and (max-width: 480px) {
-    width: 480px;
+    width: 100vw;
   }
 
   //481px — 768px: iPads, Tablets
@@ -49,12 +49,14 @@
   justify-content: flex-start;
 
   @media (max-width: 320px) {
-    width: 320px;
+    width: 100vw;
+    flex-direction: column;
   }
 
   //320px — 480px: Mobile devices
   @media (min-width: 320px) and (max-width: 480px) {
-    width: 480px;
+    width: 100vw;
+    flex-direction: column;
   }
 
   //481px — 768px: iPads, Tablets
@@ -80,6 +82,17 @@
   > div {
     width: 450px;
     margin-left: 50px;
+
+    @media (max-width: 320px) {
+      width: 90vw;
+      margin-left: 10px;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 95vw;
+      margin-left: 10px;
+    }
 
     > span {
       font-family: "Montserrat", sans-serif;
@@ -114,12 +127,14 @@
   justify-content: flex-end;
 
   @media (max-width: 320px) {
-    width: 320px;
+    width: 100vw;
+    flex-direction: column;
   }
 
   //320px — 480px: Mobile devices
   @media (min-width: 320px) and (max-width: 480px) {
-    width: 480px;
+    width: 100vw;
+    flex-direction: column;
   }
 
   //481px — 768px: iPads, Tablets
@@ -145,6 +160,17 @@
   > div {
     width: 450px;
     margin-left: 50px;
+
+    @media (max-width: 320px) {
+      width: 90vw;
+      margin-left: 10px;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 95vw;
+      margin-left: 10px;
+    }
 
     > span {
       font-family: "Montserrat", sans-serif;
