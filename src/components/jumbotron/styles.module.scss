@@ -19,7 +19,7 @@
   }
 
   //1025px — 1200px: Desktops, large screens
-  @media (min-width: 1025px) and (max-width: 1200px) {
+  @media (min-width: 1025px) and (max-width: 1399px) {
     height: 100vh;
   }
 
@@ -59,7 +59,7 @@
     }
 
     //1025px — 1200px: Desktops, large screens
-    @media (min-width: 1025px) and (max-width: 1200px) {
+    @media (min-width: 1025px) and (max-width: 1399px) {
       padding: 0 100px;
     }
 
@@ -107,7 +107,7 @@
       }
 
       //1025px — 1200px: Desktops, large screens
-      @media (min-width: 1025px) and (max-width: 1200px) {
+      @media (min-width: 1025px) and (max-width: 1399px) {
         font-size: 48px;
         width: 560px;
         line-height: 60px;
@@ -150,7 +150,7 @@
       }
 
       //1025px — 1200px: Desktops, large screens
-      @media (min-width: 1025px) and (max-width: 1200px) {
+      @media (min-width: 1025px) and (max-width: 1399px) {
         font-size: 24px;
         line-height: 34px;
       }
