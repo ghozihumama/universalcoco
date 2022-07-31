@@ -1,5 +1,5 @@
 .container {
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     height: 30vh;
   }
 
@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: flex-start;
 
-    @media (min-width: 320px) {
+    @media (max-width: 320px) {
       padding: 0 10px;
     }
 
@@ -79,7 +79,7 @@
       font-weight: 700;
       text-align: left;
 
-      @media (min-width: 320px) {
+      @media (max-width: 320px) {
         font-size: 24px;
         width: 300px;
         line-height: 32px;
@@ -126,7 +126,7 @@
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
 
-      @media (min-width: 320px) {
+      @media (max-width: 320px) {
         font-size: 12px;
         line-height: 18px;
       }

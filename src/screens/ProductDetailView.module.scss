@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 100vw;
     margin: 100px 0px;
   }
@@ -40,7 +40,7 @@
 }
 
 .contentTextWrapper {
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 100vw;
     margin-top: 40px;
   }
@@ -78,7 +78,7 @@
     line-height: 48px;
     color: #000000;
 
-    @media (min-width: 320px) {
+    @media (max-width: 320px) {
       width: 100vw;
       padding: 0px 5px;
       font-size: 18px;
@@ -102,7 +102,7 @@
     color: #000000;
     margin-top: 8px;
 
-    @media (min-width: 320px) {
+    @media (max-width: 320px) {
       width: 100vw;
       padding: 0px 5px;
       font-size: 12px;
@@ -126,7 +126,7 @@
     color: #000000;
     margin-top: 32px;
 
-    @media (min-width: 320px) {
+    @media (max-width: 320px) {
       width: 100vw;
       padding: 0px 5px;
     }
@@ -144,7 +144,7 @@
   flex-direction: column;
   align-items: flex-end;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 320px;
   }
 
@@ -184,7 +184,7 @@
   margin-top: 10px;
   border-radius: 10px;
   object-fit: cover;
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 320px;
     height: 320px;
   }
@@ -226,7 +226,7 @@
   margin-top: 10px;
   position: relative;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 320px;
   }
 
@@ -279,7 +279,7 @@
   border-radius: 5px;
   cursor: pointer;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 40px;
     height: 40px;
   }
@@ -319,7 +319,7 @@
   display: flex;
   margin-top: 30px;
   justify-content: center;
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 320px;
   }
 
@@ -378,7 +378,7 @@
 .specificationWrapper {
   margin-top: 64px;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 320px;
     margin: 10px;
   }

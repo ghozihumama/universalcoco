@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 320px;
   }
 
@@ -48,7 +48,7 @@
   align-items: center;
   justify-content: flex-start;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 320px;
   }
 
@@ -113,7 +113,7 @@
   align-items: center;
   justify-content: flex-end;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     width: 320px;
   }
 

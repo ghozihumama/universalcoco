@@ -4,13 +4,73 @@
   display: flex;
   align-items: center;
 
+  @media (max-width: 320px) {
+    padding: 100px 10px;
+  }
+
+  //320px — 480px: Mobile devices
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding: 100px 10px;
+  }
+
+  //481px — 768px: iPads, Tablets
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 100px 100px;
+  }
+
+  //769px — 1024px: Small screens, laptops
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 100px 100px;
+  }
+
+  //1025px — 1200px: Desktops, large screens
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    padding: 100px 100px;
+  }
+
+  //1201px and more —  Extra large screens, TV
+  @media (min-width: 1400px) {
+    padding: 100px 100px;
+  }
+
   > svg {
     cursor: pointer;
   }
 
   > main {
-    flex: 1;
     padding: 0 30px;
+    display: flex;
+
+    @media (max-width: 320px) {
+      padding: 0px;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 0px;
+    }
+
+    //481px — 768px: iPads, Tablets
+    @media (min-width: 481px) and (max-width: 768px) {
+      padding: 0 30px;
+    }
+
+    //769px — 1024px: Small screens, laptops
+    @media (min-width: 769px) and (max-width: 1024px) {
+      padding: 0 30px;
+    }
+
+    //1025px — 1200px: Desktops, large screens
+    @media (min-width: 1025px) and (max-width: 1200px) {
+      padding: 0 30px;
+      justify-content: space-between;
+    }
+
+    //1201px and more —  Extra large screens, TV
+    @media (min-width: 1400px) {
+      padding: 0 30px;
+      justify-content: space-between;
+    }
 
     > .infoContainer {
       display: flex;
@@ -20,7 +80,35 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 430px;
+
+        @media (max-width: 320px) {
+          width: 90vw;
+        }
+
+        //320px — 480px: Mobile devices
+        @media (min-width: 320px) and (max-width: 480px) {
+          width: 95vw;
+        }
+
+        //481px — 768px: iPads, Tablets
+        @media (min-width: 481px) and (max-width: 768px) {
+          width: 430px;
+        }
+
+        //769px — 1024px: Small screens, laptops
+        @media (min-width: 769px) and (max-width: 1024px) {
+          width: 430px;
+        }
+
+        //1025px — 1200px: Desktops, large screens
+        @media (min-width: 1025px) and (max-width: 1200px) {
+          width: 430px;
+        }
+
+        //1201px and more —  Extra large screens, TV
+        @media (min-width: 1400px) {
+          width: 430px;
+        }
 
         > h2 {
           color: #333333;
@@ -114,12 +202,82 @@
             }
           }
         }
+
+        > img {
+          @media (max-width: 320px) {
+            width: 90vw;
+            border-radius: 8px;
+          }
+
+          //320px — 480px: Mobile devices
+          @media (min-width: 320px) and (max-width: 480px) {
+            width: 95vw;
+            border-radius: 8px;
+          }
+
+          //481px — 768px: iPads, Tablets
+          @media (min-width: 481px) and (max-width: 768px) {
+            display: none;
+          }
+
+          //769px — 1024px: Small screens, laptops
+          @media (min-width: 769px) and (max-width: 1024px) {
+            display: none;
+          }
+
+          //1025px — 1200px: Desktops, large screens
+          @media (min-width: 1025px) and (max-width: 1200px) {
+            display: none;
+          }
+
+          //1201px and more —  Extra large screens, TV
+          @media (min-width: 1400px) {
+            display: none;
+          }
+        }
       }
 
       > img {
         width: 450px;
         height: 450px;
         border-radius: 8px;
+
+        @media (max-width: 320px) {
+          display: none;
+        }
+
+        //320px — 480px: Mobile devices
+        @media (min-width: 320px) and (max-width: 480px) {
+          display: none;
+        }
+
+        //481px — 768px: iPads, Tablets
+        @media (min-width: 481px) and (max-width: 768px) {
+          width: 450px;
+          height: 450px;
+          border-radius: 8px;
+        }
+
+        //769px — 1024px: Small screens, laptops
+        @media (min-width: 769px) and (max-width: 1024px) {
+          width: 450px;
+          height: 450px;
+          border-radius: 8px;
+        }
+
+        //1025px — 1200px: Desktops, large screens
+        @media (min-width: 1025px) and (max-width: 1200px) {
+          width: 450px;
+          height: 450px;
+          border-radius: 8px;
+        }
+
+        //1201px and more —  Extra large screens, TV
+        @media (min-width: 1400px) {
+          width: 450px;
+          height: 450px;
+          border-radius: 8px;
+        }
       }
     }
 

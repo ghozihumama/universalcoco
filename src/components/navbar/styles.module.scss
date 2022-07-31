@@ -10,7 +10,7 @@
 .navbar {
   position: fixed;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     padding: 10px !important;
     width: 100vw;
   }
@@ -72,7 +72,7 @@
   &.black {
     color: #333333;
 
-    @media (min-width: 320px) {
+    @media (max-width: 320px) {
       background-color: #ffffff;
       margin-top: 10px;
     }
@@ -87,7 +87,7 @@
   &.white {
     color: #ffffff;
 
-    @media (min-width: 320px) {
+    @media (max-width: 320px) {
       background-color: #333333;
       margin-top: 10px;
     }

@@ -89,6 +89,7 @@ export const Product = (props) => {
             <h3>{data[index].name}</h3>
             <p>{data[index].desc}</p>
             <p>{data[index].subDesc}</p>
+            <img src={data[index].thumbnail} alt={"thumbnail"} />
             <div>
               {data[index].key && (
                 <button>
