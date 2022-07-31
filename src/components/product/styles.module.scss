@@ -5,12 +5,12 @@
   align-items: center;
 
   @media (max-width: 320px) {
-    padding: 100px 10px;
+    padding: 50px 10px;
   }
 
   //320px — 480px: Mobile devices
   @media (min-width: 320px) and (max-width: 480px) {
-    padding: 100px 10px;
+    padding: 50px 10px;
   }
 
   //481px — 768px: iPads, Tablets

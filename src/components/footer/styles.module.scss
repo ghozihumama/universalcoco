@@ -1,7 +1,35 @@
 .container {
-  padding-top: 100px;
   background-color: #373737;
   color: #ffffff;
+
+  @media (max-width: 320px) {
+    padding-top: 50px;
+  }
+
+  //320px — 480px: Mobile devices
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding-top: 50px;
+  }
+
+  //481px — 768px: iPads, Tablets
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding-top: 100px;
+  }
+
+  //769px — 1024px: Small screens, laptops
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding-top: 100px;
+  }
+
+  //1025px — 1200px: Desktops, large screens
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    padding-top: 100px;
+  }
+
+  //1201px and more —  Extra large screens, TV
+  @media (min-width: 1400px) {
+    padding-top: 100px;
+  }
 
   > header {
     display: flex;
@@ -11,16 +39,58 @@
       color: #ffffff;
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
-      font-size: 32px;
-      line-height: 32px;
+
+      @media (max-width: 320px) {
+        font-size: 18px;
+        line-height: 18px;
+      }
+
+      //320px — 480px: Mobile devices
+      @media (min-width: 320px) and (max-width: 480px) {
+        font-size: 24px;
+        line-height: 24px;
+      }
+
+      //481px — 768px: iPads, Tablets
+      @media (min-width: 481px) and (max-width: 768px) {
+        font-size: 32px;
+        line-height: 32px;
+      }
+
+      //769px — 1024px: Small screens, laptops
+      @media (min-width: 769px) {
+        font-size: 32px;
+        line-height: 32px;
+      }
     }
 
     > span {
       color: #ffffff;
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
-      font-size: 18px;
-      line-height: 18px;
+
+      @media (max-width: 320px) {
+        font-size: 12px;
+        line-height: 12px;
+      }
+
+      //320px — 480px: Mobile devices
+      @media (min-width: 320px) and (max-width: 480px) {
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      //481px — 768px: iPads, Tablets
+      @media (min-width: 481px) and (max-width: 768px) {
+        font-size: 18px;
+        line-height: 18px;
+      }
+
+      //769px — 1024px: Small screens, laptops
+      @media (min-width: 769px) {
+        font-size: 18px;
+        line-height: 18px;
+      }
     }
   }
 
@@ -28,14 +98,72 @@
     padding: 0 100px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 100px;
 
+    @media (max-width: 320px) {
+      padding: 0 10px;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 0 10px;
+    }
+
+    //481px — 768px: iPads, Tablets
+    @media (min-width: 481px) and (max-width: 768px) {
+      padding: 0 100px;
+    }
+
+    //769px — 1024px: Small screens, laptops
+    @media (min-width: 769px) and (max-width: 1024px) {
+      padding: 0 100px;
+    }
+
+    //1025px — 1200px: Desktops, large screens
+    @media (min-width: 1025px) and (max-width: 1200px) {
+      padding: 0 100px;
+    }
+
+    //1201px and more —  Extra large screens, TV
+    @media (min-width: 1400px) {
+      padding: 0 100px;
+    }
+
     > section {
-      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       margin-top: 30px;
+
+      @media (max-width: 320px) {
+        width: 90vw;
+      }
+
+      //320px — 480px: Mobile devices
+      @media (min-width: 320px) and (max-width: 480px) {
+        width: 95vw;
+      }
+
+      //481px — 768px: iPads, Tablets
+      @media (min-width: 481px) and (max-width: 768px) {
+        flex: 1;
+      }
+
+      //769px — 1024px: Small screens, laptops
+      @media (min-width: 769px) and (max-width: 1024px) {
+        flex: 1;
+      }
+
+      //1025px — 1200px: Desktops, large screens
+      @media (min-width: 1025px) and (max-width: 1200px) {
+        flex: 1;
+      }
+
+      //1201px and more —  Extra large screens, TV
+      @media (min-width: 1400px) {
+        flex: 1;
+      }
 
       > img {
         width: 150px;
@@ -80,6 +208,35 @@
     display: flex;
     align-items: center;
     padding: 10px 100px;
+
+    @media (max-width: 320px) {
+      padding: 10px;
+    }
+
+    //320px — 480px: Mobile devices
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 10px;
+    }
+
+    //481px — 768px: iPads, Tablets
+    @media (min-width: 481px) and (max-width: 768px) {
+      padding: 10px 100px;
+    }
+
+    //769px — 1024px: Small screens, laptops
+    @media (min-width: 769px) and (max-width: 1024px) {
+      padding: 10px 100px;
+    }
+
+    //1025px — 1200px: Desktops, large screens
+    @media (min-width: 1025px) and (max-width: 1200px) {
+      padding: 10px 100px;
+    }
+
+    //1201px and more —  Extra large screens, TV
+    @media (min-width: 1400px) {
+      padding: 10px 100px;
+    }
 
     span {
       color: #ffffff;
