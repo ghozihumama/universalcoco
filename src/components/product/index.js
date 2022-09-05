@@ -93,7 +93,7 @@ export const Product = (props) => {
             <div>
               {data[index].key && (
                 <button>
-                  <Link to={`/product/${data[index].key}`}>See Details</Link>
+                  <Link to={`/${data[index].key}`}>See Details</Link>
                 </button>
               )}
               <a

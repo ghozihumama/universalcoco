@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/journey" element={<JourneyView />} />
-        <Route path="product/:key" element={<ProductDetailView />} />
+        <Route path="/:key" element={<ProductDetailView />} />
         <Route path="/" element={<HomeView />} />
       </Routes>
       <FloatingWhatsApp
