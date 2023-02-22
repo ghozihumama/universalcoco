@@ -4,19 +4,19 @@
   "homepage": "https://universalcoco.com/",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@testing-library/jest-dom": "5.11.4",
+    "@testing-library/react": "11.1.0",
+    "@testing-library/user-event": "12.1.10",
     "bootstrap": "4.6.0",
-    "classnames": "^2.3.1",
-    "react": "^17.0.2",
-    "react-bootstrap": "^1.6.1",
-    "react-dom": "^17.0.2",
-    "react-floating-whatsapp": "^4.0.5",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "4.0.3",
-    "sass-loader": "^12.1.0",
-    "web-vitals": "^1.0.1"
+    "classnames": "2.3.1",
+    "react": "17.0.2",
+    "react-bootstrap": "1.6.1",
+    "react-dom": "17.0.2",
+    "react-floating-whatsapp": "4.0.5",
+    "react-router-dom": "6.3.0",
+    "react-scripts": "^5.0.1",
+    "sass-loader": "12.1.0",
+    "web-vitals": "1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,6 +43,6 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.50.0"
+    "sass": "1.50.0"
   }
 }
